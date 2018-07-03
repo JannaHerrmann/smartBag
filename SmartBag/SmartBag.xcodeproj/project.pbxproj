@@ -15,6 +15,7 @@
 		A0FE65BD20E29577005B076D /* SmartBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65BC20E29577005B076D /* SmartBagTests.swift */; };
 		A0FE65C820E29577005B076D /* SmartBagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65C720E29577005B076D /* SmartBagUITests.swift */; };
 		A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65D720E29F43005B076D /* TheftViewController.swift */; };
+		FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84595020EBB0BC00417013 /* LossViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A0FE65C720E29577005B076D /* SmartBagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBagUITests.swift; sourceTree = "<group>"; };
 		A0FE65C920E29577005B076D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0FE65D720E29F43005B076D /* TheftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheftViewController.swift; sourceTree = "<group>"; };
+		FA84595020EBB0BC00417013 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A0FE65B020E29577005B076D /* LaunchScreen.storyboard */,
 				A0FE65B320E29577005B076D /* Info.plist */,
 				A0FE65D720E29F43005B076D /* TheftViewController.swift */,
+				FA84595020EBB0BC00417013 /* LossViewController.swift */,
 			);
 			path = SmartBag;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				A0FE65AA20E29576005B076D /* ViewController.swift in Sources */,
 				A0FE65A820E29576005B076D /* AppDelegate.swift in Sources */,
 				A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */,
+				FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

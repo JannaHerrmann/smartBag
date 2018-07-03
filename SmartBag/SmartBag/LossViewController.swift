@@ -1,17 +1,18 @@
 //
-//  TheftViewController.swift
+//  LossViewController.swift
 //  SmartBag
 //
-//  Created by Nicklas Linz on 26.06.18.
+//  Created by Janna Herrmann on 03.07.18.
 //  Copyright © 2018 Deutsches Forschungszentrum fuer Kuenstliche Intelligenz GmbH. All rights reserved.
 //
+
 
 import UIKit
 import MapKit
 import CoreLocation
 
 
-class TheftViewController : UIViewController, CLLocationManagerDelegate{
+class LostViewController : UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var optionView: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -68,7 +69,7 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
             isCentered = true
             self.centerView()
         }
-
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
