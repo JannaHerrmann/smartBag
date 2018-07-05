@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,71 +43,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvv-S5-4kw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVE-dK-SC0">
-                                        <rect key="frame" x="126" y="193.5" width="123" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVE-dK-SC0">
+                                        <rect key="frame" x="126" y="194" width="123" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="29"/>
                                         <color key="textColor" red="0.27843137254901962" green="0.47058823529411764" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-3U-9rW">
-                                        <rect key="frame" x="-34" y="74" width="442" height="119.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-3U-9rW">
+                                        <rect key="frame" x="-34" y="74" width="442" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="hVE-dK-SC0" firstAttribute="top" secondItem="dVm-3U-9rW" secondAttribute="bottom" id="CDp-Qd-Qaf"/>
-                                    <constraint firstAttribute="bottom" secondItem="dVm-3U-9rW" secondAttribute="bottom" constant="40" id="DAP-uj-REG"/>
-                                    <constraint firstItem="dVm-3U-9rW" firstAttribute="centerX" secondItem="Hvv-S5-4kw" secondAttribute="centerX" id="Jjo-GM-6oX"/>
-                                    <constraint firstItem="hVE-dK-SC0" firstAttribute="centerX" secondItem="Hvv-S5-4kw" secondAttribute="centerX" id="V59-ko-i7D"/>
-                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="shm-nI-PJ8">
-                                <rect key="frame" x="0.0" y="233.5" width="375" height="433.5"/>
+                                <rect key="frame" x="67" y="241" width="241" height="435"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD7-pg-GXr">
-                                        <rect key="frame" x="84.5" y="0.0" width="206" height="144.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Theft Prevention"/>
-                                        <connections>
-                                            <segue destination="0tD-G7-V64" kind="show" id="0Am-c1-ZKJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egC-qk-8o1">
-                                        <rect key="frame" x="94.5" y="144.5" width="186" height="144.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <state key="normal" title="Loss Detection"/>
-                                        <connections>
-                                            <segue destination="h7e-eb-ftz" kind="show" id="2MV-5e-vCt"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-dy-GU8">
+                                        <rect key="frame" x="0.0" y="0.0" width="241" height="145"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD7-pg-GXr">
+                                                <rect key="frame" x="0.0" y="42" width="241" height="60"/>
+                                                <color key="backgroundColor" red="0.3294117647" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="Theft Prevention">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="0tD-G7-V64" kind="show" id="0Am-c1-ZKJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="XD7-pg-GXr" firstAttribute="leading" secondItem="mSh-dy-GU8" secondAttribute="leading" id="1Xf-SY-2wV"/>
+                                            <constraint firstItem="XD7-pg-GXr" firstAttribute="top" secondItem="mSh-dy-GU8" secondAttribute="top" constant="42" id="9Ak-Tl-imu"/>
+                                            <constraint firstItem="XD7-pg-GXr" firstAttribute="centerY" secondItem="mSh-dy-GU8" secondAttribute="centerY" id="cmz-cp-xqU"/>
+                                            <constraint firstItem="XD7-pg-GXr" firstAttribute="centerX" secondItem="mSh-dy-GU8" secondAttribute="centerX" id="xhr-3C-Isz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwS-1w-4wg">
+                                        <rect key="frame" x="0.0" y="145" width="241" height="145"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egC-qk-8o1">
+                                                <rect key="frame" x="0.0" y="42" width="241" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="Loss Detection">
+                                                    <color key="titleColor" red="0.23529411759999999" green="0.47843137250000001" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="h7e-eb-ftz" kind="show" id="2MV-5e-vCt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="egC-qk-8o1" firstAttribute="leading" secondItem="nwS-1w-4wg" secondAttribute="leading" id="Dw0-cg-vL9"/>
+                                            <constraint firstItem="egC-qk-8o1" firstAttribute="centerX" secondItem="nwS-1w-4wg" secondAttribute="centerX" id="Ut2-SC-HwM"/>
+                                            <constraint firstItem="egC-qk-8o1" firstAttribute="centerY" secondItem="nwS-1w-4wg" secondAttribute="centerY" id="dxq-FA-7OS"/>
+                                            <constraint firstItem="egC-qk-8o1" firstAttribute="top" secondItem="nwS-1w-4wg" secondAttribute="top" constant="42" id="i7F-Ps-4uN"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC9-uz-WcU">
-                                        <rect key="frame" x="133.5" y="289" width="108.5" height="144.5"/>
+                                        <rect key="frame" x="66" y="290" width="109" height="145"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="145" id="WSO-NZ-m8v"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                         <color key="textColor" red="0.3294117647" green="0.64705882349999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mSh-dy-GU8" firstAttribute="leading" secondItem="shm-nI-PJ8" secondAttribute="leading" id="UJc-I3-dHb"/>
+                                    <constraint firstItem="OC9-uz-WcU" firstAttribute="leading" secondItem="shm-nI-PJ8" secondAttribute="leading" constant="66" id="dBs-Sd-8SW"/>
+                                    <constraint firstItem="mSh-dy-GU8" firstAttribute="leading" secondItem="nwS-1w-4wg" secondAttribute="leading" id="gjO-4D-Zlw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dVm-3U-9rW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="328-zE-wTe"/>
-                            <constraint firstAttribute="trailing" secondItem="shm-nI-PJ8" secondAttribute="trailing" id="Lhb-Xt-Xp0"/>
-                            <constraint firstAttribute="trailing" secondItem="Hvv-S5-4kw" secondAttribute="trailing" id="NdJ-Rz-N5q"/>
-                            <constraint firstItem="shm-nI-PJ8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tkp-Nv-Oxh"/>
-                            <constraint firstAttribute="bottom" secondItem="shm-nI-PJ8" secondAttribute="bottom" id="dWA-g9-8lf"/>
-                            <constraint firstItem="shm-nI-PJ8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.65" id="gXR-jV-xbA"/>
-                            <constraint firstItem="Hvv-S5-4kw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jgV-ve-3GP"/>
-                            <constraint firstItem="Hvv-S5-4kw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rCJ-cB-Pdv"/>
-                            <constraint firstItem="Hvv-S5-4kw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="veH-Z2-7bh"/>
+                            <constraint firstItem="mSh-dy-GU8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="687-YN-zf6"/>
+                            <constraint firstItem="shm-nI-PJ8" firstAttribute="centerX" secondItem="Hvv-S5-4kw" secondAttribute="centerX" id="ATm-43-96F"/>
+                            <constraint firstItem="shm-nI-PJ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aI2-yQ-hbr"/>
+                            <constraint firstItem="Hvv-S5-4kw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hJM-S8-aaD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="shm-nI-PJ8" secondAttribute="bottom" constant="-53" id="hfi-tm-8ry"/>
+                            <constraint firstItem="shm-nI-PJ8" firstAttribute="top" secondItem="Hvv-S5-4kw" secondAttribute="bottom" constant="7" id="jxi-X0-Wro"/>
+                            <constraint firstItem="Hvv-S5-4kw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="otX-Fv-xAM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ONV-P3-MDL"/>
                     <connections>
+                        <outlet property="lostButton" destination="egC-qk-8o1" id="pcP-s9-FV4"/>
+                        <outlet property="theftButton" destination="XD7-pg-GXr" id="SOQ-PX-MrJ"/>
                         <outlet property="topView" destination="Hvv-S5-4kw" id="bh8-XN-c1e"/>
                     </connections>
                 </viewController>
@@ -212,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NU5-9E-2CI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108" y="224.4377811094453"/>
+            <point key="canvasLocation" x="2287" y="-468"/>
         </scene>
         <!--Loss-->
         <scene sceneID="l9z-cL-k0F">
@@ -280,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPk-dg-kWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108" y="1210"/>
+            <point key="canvasLocation" x="2286" y="478"/>
         </scene>
     </scenes>
     <resources>
