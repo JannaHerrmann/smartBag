@@ -15,6 +15,7 @@
 		A0FE65BD20E29577005B076D /* SmartBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65BC20E29577005B076D /* SmartBagTests.swift */; };
 		A0FE65C820E29577005B076D /* SmartBagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65C720E29577005B076D /* SmartBagUITests.swift */; };
 		A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65D720E29F43005B076D /* TheftViewController.swift */; };
+		FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */; };
 		FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84595020EBB0BC00417013 /* LossViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +51,9 @@
 		A0FE65C720E29577005B076D /* SmartBagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBagUITests.swift; sourceTree = "<group>"; };
 		A0FE65C920E29577005B076D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0FE65D720E29F43005B076D /* TheftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheftViewController.swift; sourceTree = "<group>"; };
+		FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FA84595020EBB0BC00417013 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
+		FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartBag.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +104,9 @@
 		A0FE65A620E29576005B076D /* SmartBag */ = {
 			isa = PBXGroup;
 			children = (
+				FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */,
 				A0FE65A720E29576005B076D /* AppDelegate.swift */,
+				FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */,
 				A0FE65A920E29576005B076D /* ViewController.swift */,
 				A0FE65AB20E29576005B076D /* Main.storyboard */,
 				A0FE65AE20E29577005B076D /* Assets.xcassets */,
@@ -199,6 +204,11 @@
 				TargetAttributes = {
 					A0FE65A320E29576005B076D = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A0FE65B720E29577005B076D = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -264,6 +274,7 @@
 			files = (
 				A0FE65AA20E29576005B076D /* ViewController.swift in Sources */,
 				A0FE65A820E29576005B076D /* AppDelegate.swift in Sources */,
+				FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */,
 				A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */,
 				FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */,
 			);
@@ -438,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartBag/SmartBag.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B34CBW2A3P;
 				INFOPLIST_FILE = SmartBag/Info.plist;
@@ -446,7 +458,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "DFKI-GmbH.SmartBag";
+				PRODUCT_BUNDLE_IDENTIFIER = "DFKI-GmbH.SmartBagPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartBag/SmartBag.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B34CBW2A3P;
 				INFOPLIST_FILE = SmartBag/Info.plist;
@@ -465,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "DFKI-GmbH.SmartBag";
+				PRODUCT_BUNDLE_IDENTIFIER = "DFKI-GmbH.SmartBagPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

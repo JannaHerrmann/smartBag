@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var theftButton: UIButton!
     @IBOutlet var topView: UIView!
     @IBOutlet weak var lostButton: UIButton!
-    
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.topView.layer.borderWidth = 1.0
@@ -30,6 +31,9 @@ class ViewController: UIViewController {
         self.lostButton.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
         self.lostButton.layer.cornerRadius = 10
         self.lostButton.layer.borderWidth = 1
+        
+        NotificationHandler().pushOpeningNotification()
+        
 
 		// Do any additional setup after loading the view, typically from a nib.
 	}
