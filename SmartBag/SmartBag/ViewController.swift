@@ -36,7 +36,13 @@ class ViewController: UIViewController {
         NotificationHandler().pushOpeningNotification()
         
         simpleBluetoothIO = SimpleBluetoothIO(serviceUUID: "19B10010-E8F2-537E-4F6C-D104768A1214", delegate: self)
-        ServerCommunication.fetchAllRooms()
+		DispatchQueue.global().async {
+			while(true){
+				ServerCommunication.heartbeat()
+				sleep(1)
+			}
+		}
+
         
 	}
     
