@@ -19,10 +19,10 @@
 		A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65D720E29F43005B076D /* TheftViewController.swift */; };
 		B89EE74E2850331482CBD6AD /* Pods_SmartBagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C91E9D868C866A60C5715BD /* Pods_SmartBagUITests.framework */; };
 		FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */; };
-		FA81666220F49322007CAE5A /* SimpleBluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */; };
-		FA81666420F49328007CAE5A /* NSData+Int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81666320F49328007CAE5A /* NSData+Int8.swift */; };
 		FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84595020EBB0BC00417013 /* LossViewController.swift */; };
 		FA92141C20F765630027AC74 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA92141B20F765630027AC74 /* Alamofire.framework */; };
+		FA92141F20F769620027AC74 /* SimpleBluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92141D20F769620027AC74 /* SimpleBluetoothIO.swift */; };
+		FA92142020F769620027AC74 /* NSData+Int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92141E20F769620027AC74 /* NSData+Int8.swift */; };
 		FAF13FDF20F76324006E8C2A /* ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,10 +68,10 @@
 		B11D476BD4692A2906D72A3C /* Pods-SmartBagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBagTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBagTests/Pods-SmartBagTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC03D3DFBED0B64E9DDBBA53 /* Pods-SmartBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBag/Pods-SmartBag.release.xcconfig"; sourceTree = "<group>"; };
 		FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleBluetoothIO.swift; path = "../../../../../../../../Downloads/hello-bluetooth-master 4/HelloBluetooth/SimpleBluetoothIO.swift"; sourceTree = "<group>"; };
-		FA81666320F49328007CAE5A /* NSData+Int8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData+Int8.swift"; path = "../../../../../../../../Downloads/hello-bluetooth-master 4/HelloBluetooth/NSData+Int8.swift"; sourceTree = "<group>"; };
 		FA84595020EBB0BC00417013 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
 		FA92141B20F765630027AC74 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA92141D20F769620027AC74 /* SimpleBluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleBluetoothIO.swift; sourceTree = "<group>"; };
+		FA92141E20F769620027AC74 /* NSData+Int8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Int8.swift"; sourceTree = "<group>"; };
 		FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartBag.entitlements; sourceTree = "<group>"; };
 		FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,11 +154,11 @@
 		A0FE65A620E29576005B076D /* SmartBag */ = {
 			isa = PBXGroup;
 			children = (
+				FA92141E20F769620027AC74 /* NSData+Int8.swift */,
+				FA92141D20F769620027AC74 /* SimpleBluetoothIO.swift */,
 				FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */,
 				A0FE65A720E29576005B076D /* AppDelegate.swift */,
-				FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */,
 				FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */,
-				FA81666320F49328007CAE5A /* NSData+Int8.swift */,
 				A0FE65A920E29576005B076D /* ViewController.swift */,
 				FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */,
 				A0FE65AB20E29576005B076D /* Main.storyboard */,
@@ -404,12 +404,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA81666220F49322007CAE5A /* SimpleBluetoothIO.swift in Sources */,
 				FAF13FDF20F76324006E8C2A /* ServerCommunication.swift in Sources */,
 				A0FE65AA20E29576005B076D /* ViewController.swift in Sources */,
 				A0FE65A820E29576005B076D /* AppDelegate.swift in Sources */,
+				FA92141F20F769620027AC74 /* SimpleBluetoothIO.swift in Sources */,
 				FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */,
-				FA81666420F49328007CAE5A /* NSData+Int8.swift in Sources */,
+				FA92142020F769620027AC74 /* NSData+Int8.swift in Sources */,
 				A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */,
 				FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */,
 			);
