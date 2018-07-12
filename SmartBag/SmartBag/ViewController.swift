@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var theftButton: UIButton!
     @IBOutlet var topView: UIView!
     @IBOutlet weak var lostButton: UIButton!
+    var simpleBluetoothIO: SimpleBluetoothIO!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -34,15 +35,25 @@ class ViewController: UIViewController {
         
         NotificationHandler().pushOpeningNotification()
         
-
-		// Do any additional setup after loading the view, typically from a nib.
+        simpleBluetoothIO = SimpleBluetoothIO(serviceUUID: "19B10010-E8F2-537E-4F6C-D104768A1214", delegate: self)
+        ServerCommunication.fetchAllRooms()
+        
 	}
+    
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
+ 
+}
+extension ViewController: SimpleBluetoothIODelegate {
+    func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8) {
+        if value > 0 {
+            print("Receive greater 0")
+        } else {
+            print("Receive else")
+        }
+    }
 }
 

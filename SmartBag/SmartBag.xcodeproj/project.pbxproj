@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2757781651B4CD5E5349A57E /* Pods_SmartBagTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572E995153BF0F72EDEF2C2B /* Pods_SmartBagTests.framework */; };
+		2B6A340AFEA16DA5859E4655 /* Pods_SmartBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8FEEA64831B1137DAA117F /* Pods_SmartBag.framework */; };
 		A0FE65A820E29576005B076D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65A720E29576005B076D /* AppDelegate.swift */; };
 		A0FE65AA20E29576005B076D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65A920E29576005B076D /* ViewController.swift */; };
 		A0FE65AD20E29576005B076D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0FE65AB20E29576005B076D /* Main.storyboard */; };
@@ -15,8 +17,13 @@
 		A0FE65BD20E29577005B076D /* SmartBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65BC20E29577005B076D /* SmartBagTests.swift */; };
 		A0FE65C820E29577005B076D /* SmartBagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65C720E29577005B076D /* SmartBagUITests.swift */; };
 		A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE65D720E29F43005B076D /* TheftViewController.swift */; };
+		B89EE74E2850331482CBD6AD /* Pods_SmartBagUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C91E9D868C866A60C5715BD /* Pods_SmartBagUITests.framework */; };
 		FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */; };
+		FA81666220F49322007CAE5A /* SimpleBluetoothIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */; };
+		FA81666420F49328007CAE5A /* NSData+Int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81666320F49328007CAE5A /* NSData+Int8.swift */; };
 		FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84595020EBB0BC00417013 /* LossViewController.swift */; };
+		FA92141C20F765630027AC74 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA92141B20F765630027AC74 /* Alamofire.framework */; };
+		FAF13FDF20F76324006E8C2A /* ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		295A9E76E9BF1F57BB7C2715 /* Pods-SmartBagUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBagUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBagUITests/Pods-SmartBagUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8FEEA64831B1137DAA117F /* Pods_SmartBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		572E995153BF0F72EDEF2C2B /* Pods_SmartBagTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBagTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C91E9D868C866A60C5715BD /* Pods_SmartBagUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBagUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87D25D3239EA44789AF3AC36 /* Pods-SmartBagUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBagUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBagUITests/Pods-SmartBagUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0FE65A420E29576005B076D /* SmartBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FE65A720E29576005B076D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0FE65A920E29576005B076D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,9 +63,17 @@
 		A0FE65C720E29577005B076D /* SmartBagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBagUITests.swift; sourceTree = "<group>"; };
 		A0FE65C920E29577005B076D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0FE65D720E29F43005B076D /* TheftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheftViewController.swift; sourceTree = "<group>"; };
+		A1A66342FC1CF7D841AFD814 /* Pods-SmartBagTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBagTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBagTests/Pods-SmartBagTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A25D5AD62C99C4940DC9EF6B /* Pods-SmartBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBag/Pods-SmartBag.debug.xcconfig"; sourceTree = "<group>"; };
+		B11D476BD4692A2906D72A3C /* Pods-SmartBagTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBagTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBagTests/Pods-SmartBagTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC03D3DFBED0B64E9DDBBA53 /* Pods-SmartBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBag/Pods-SmartBag.release.xcconfig"; sourceTree = "<group>"; };
 		FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleBluetoothIO.swift; path = "../../../../../../../../Downloads/hello-bluetooth-master 4/HelloBluetooth/SimpleBluetoothIO.swift"; sourceTree = "<group>"; };
+		FA81666320F49328007CAE5A /* NSData+Int8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData+Int8.swift"; path = "../../../../../../../../Downloads/hello-bluetooth-master 4/HelloBluetooth/NSData+Int8.swift"; sourceTree = "<group>"; };
 		FA84595020EBB0BC00417013 /* LossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossViewController.swift; sourceTree = "<group>"; };
+		FA92141B20F765630027AC74 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartBag.entitlements; sourceTree = "<group>"; };
+		FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA92141C20F765630027AC74 /* Alamofire.framework in Frameworks */,
+				2B6A340AFEA16DA5859E4655 /* Pods_SmartBag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2757781651B4CD5E5349A57E /* Pods_SmartBagTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +98,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89EE74E2850331482CBD6AD /* Pods_SmartBagUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A89C4885C602AECD52EBE29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25D5AD62C99C4940DC9EF6B /* Pods-SmartBag.debug.xcconfig */,
+				CC03D3DFBED0B64E9DDBBA53 /* Pods-SmartBag.release.xcconfig */,
+				A1A66342FC1CF7D841AFD814 /* Pods-SmartBagTests.debug.xcconfig */,
+				B11D476BD4692A2906D72A3C /* Pods-SmartBagTests.release.xcconfig */,
+				295A9E76E9BF1F57BB7C2715 /* Pods-SmartBagUITests.debug.xcconfig */,
+				87D25D3239EA44789AF3AC36 /* Pods-SmartBagUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D4A346EF0464A438F44A69A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA92141B20F765630027AC74 /* Alamofire.framework */,
+				2A8FEEA64831B1137DAA117F /* Pods_SmartBag.framework */,
+				572E995153BF0F72EDEF2C2B /* Pods_SmartBagTests.framework */,
+				6C91E9D868C866A60C5715BD /* Pods_SmartBagUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0FE659B20E29576005B076D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +136,8 @@
 				A0FE65BB20E29577005B076D /* SmartBagTests */,
 				A0FE65C620E29577005B076D /* SmartBagUITests */,
 				A0FE65A520E29576005B076D /* Products */,
+				3A89C4885C602AECD52EBE29 /* Pods */,
+				7D4A346EF0464A438F44A69A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,8 +156,11 @@
 			children = (
 				FAF06B0D20EE182D0030A04C /* SmartBag.entitlements */,
 				A0FE65A720E29576005B076D /* AppDelegate.swift */,
+				FA81666120F49322007CAE5A /* SimpleBluetoothIO.swift */,
 				FA58656B20EE2BA2005EB911 /* NotificationHandler.swift */,
+				FA81666320F49328007CAE5A /* NSData+Int8.swift */,
 				A0FE65A920E29576005B076D /* ViewController.swift */,
+				FAF13FDE20F76324006E8C2A /* ServerCommunication.swift */,
 				A0FE65AB20E29576005B076D /* Main.storyboard */,
 				A0FE65AE20E29577005B076D /* Assets.xcassets */,
 				A0FE65B020E29577005B076D /* LaunchScreen.storyboard */,
@@ -143,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0FE65CC20E29577005B076D /* Build configuration list for PBXNativeTarget "SmartBag" */;
 			buildPhases = (
+				6657569D75BFF2D0A84367DD /* [CP] Check Pods Manifest.lock */,
 				A0FE65A020E29576005B076D /* Sources */,
 				A0FE65A120E29576005B076D /* Frameworks */,
 				A0FE65A220E29576005B076D /* Resources */,
+				63BA90A318589202121F8A12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0FE65CF20E29577005B076D /* Build configuration list for PBXNativeTarget "SmartBagTests" */;
 			buildPhases = (
+				85B3362FC6CB8DE14DF2C6AC /* [CP] Check Pods Manifest.lock */,
 				A0FE65B420E29577005B076D /* Sources */,
 				A0FE65B520E29577005B076D /* Frameworks */,
 				A0FE65B620E29577005B076D /* Resources */,
@@ -178,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0FE65D220E29577005B076D /* Build configuration list for PBXNativeTarget "SmartBagUITests" */;
 			buildPhases = (
+				DC5302753DC7F43FBA6FE821 /* [CP] Check Pods Manifest.lock */,
 				A0FE65BF20E29577005B076D /* Sources */,
 				A0FE65C020E29577005B076D /* Frameworks */,
 				A0FE65C120E29577005B076D /* Resources */,
@@ -267,14 +324,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63BA90A318589202121F8A12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartBag/Pods-SmartBag-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartBag/Pods-SmartBag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6657569D75BFF2D0A84367DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B3362FC6CB8DE14DF2C6AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBagTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5302753DC7F43FBA6FE821 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBagUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0FE65A020E29576005B076D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA81666220F49322007CAE5A /* SimpleBluetoothIO.swift in Sources */,
+				FAF13FDF20F76324006E8C2A /* ServerCommunication.swift in Sources */,
 				A0FE65AA20E29576005B076D /* ViewController.swift in Sources */,
 				A0FE65A820E29576005B076D /* AppDelegate.swift in Sources */,
 				FA58656C20EE2BA2005EB911 /* NotificationHandler.swift in Sources */,
+				FA81666420F49328007CAE5A /* NSData+Int8.swift in Sources */,
 				A0FE65D820E29F43005B076D /* TheftViewController.swift in Sources */,
 				FA84595120EBB0BC00417013 /* LossViewController.swift in Sources */,
 			);
@@ -447,6 +582,7 @@
 		};
 		A0FE65CD20E29577005B076D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25D5AD62C99C4940DC9EF6B /* Pods-SmartBag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SmartBag/SmartBag.entitlements;
@@ -467,6 +603,7 @@
 		};
 		A0FE65CE20E29577005B076D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC03D3DFBED0B64E9DDBBA53 /* Pods-SmartBag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SmartBag/SmartBag.entitlements;
@@ -487,6 +624,7 @@
 		};
 		A0FE65D020E29577005B076D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A66342FC1CF7D841AFD814 /* Pods-SmartBagTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +645,7 @@
 		};
 		A0FE65D120E29577005B076D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B11D476BD4692A2906D72A3C /* Pods-SmartBagTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +666,7 @@
 		};
 		A0FE65D320E29577005B076D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295A9E76E9BF1F57BB7C2715 /* Pods-SmartBagUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +686,7 @@
 		};
 		A0FE65D420E29577005B076D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D25D3239EA44789AF3AC36 /* Pods-SmartBagUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
