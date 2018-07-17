@@ -138,6 +138,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ONV-P3-MDL"/>
                     <connections>
+                        <outlet property="connectedLabel" destination="OC9-uz-WcU" id="4lZ-58-K5e"/>
                         <outlet property="lostButton" destination="egC-qk-8o1" id="pcP-s9-FV4"/>
                         <outlet property="theftButton" destination="XD7-pg-GXr" id="SOQ-PX-MrJ"/>
                         <outlet property="topView" destination="Hvv-S5-4kw" id="bh8-XN-c1e"/>

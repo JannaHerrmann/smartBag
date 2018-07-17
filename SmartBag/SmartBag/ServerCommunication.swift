@@ -14,6 +14,7 @@ class ServerCommunication{
 	static let BASEURL = "http://192.168.11.3:5000"
 	static var alamoFireManager : SessionManager? // this line
 	static var notifiedAboutLoss = false
+    static var connected = false
 
 	static func initialize(){
 		let configuration = URLSessionConfiguration.default
@@ -30,9 +31,11 @@ class ServerCommunication{
 				switch response.result{
 				case .success:
 					print(response)
+                    self.connected = true
 					break
 				case .failure:
 					NotificationHandler().pushOutOfRangeNotification()
+                    self.connected = false
 					if !ServerCommunication.notifiedAboutLoss{
 					ServerCommunication.notifiedAboutLoss = true
 					let alertController = UIAlertController(title: "Bag out of range!", message:
