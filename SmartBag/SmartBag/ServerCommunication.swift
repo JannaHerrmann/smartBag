@@ -11,7 +11,7 @@ import Alamofire
 
 class ServerCommunication{
 
-	static let BASEURL = "http://192.168.11.3:5000"
+	static let BASEURL = "http://192.168.11.2:5000"
 	static var alamoFireManager : SessionManager? // this line
 	static var notifiedAboutLoss = false
     static var connected = false
@@ -24,13 +24,20 @@ class ServerCommunication{
 	}
 
     static func heartbeat() {
-		ServerCommunication.alamoFireManager?.request(BASEURL,
+        let url = BASEURL + "/hall"
+		ServerCommunication.alamoFireManager?.request(url,
                           method: .get)
             .validate()
             .responseString { response in
 				switch response.result{
 				case .success:
-					print(response)
+                    print(Int(response.result.value!)!)
+                    if(Int(response.result.value!)! == 1){
+                        
+                    }
+                    else if (Int(response.result.value!)! == 0){
+                        
+                    }
                     self.connected = true
 					break
 				case .failure:

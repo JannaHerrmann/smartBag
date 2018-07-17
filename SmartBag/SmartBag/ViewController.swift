@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var theftButton: UIButton!
     @IBOutlet var topView: UIView!
     @IBOutlet weak var lostButton: UIButton!
@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var connectedLabel: UILabel!
     
     override func viewDidLoad() {
-		super.viewDidLoad()
-		self.topView.layer.borderWidth = 1.0
-		self.topView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
+        super.viewDidLoad()
+        self.topView.layer.borderWidth = 1.0
+        self.topView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
         
         self.theftButton.layer.borderWidth = 1.0
         self.theftButton.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
@@ -36,36 +36,43 @@ class ViewController: UIViewController {
         
         NotificationHandler().pushOpeningNotification()
         
-		DispatchQueue.global().async {
-			while(true){
-				ServerCommunication.heartbeat()
+        DispatchQueue.global().async {
+            while(true){
+                ServerCommunication.heartbeat()
+                
                 if (ServerCommunication.connected){
-                    self.setConnected(connected: true)
+                    DispatchQueue.main.async {
+                        self.setConnected(connected: true)
+                    }
                 }
                 else{
-                    self.setConnected(connected: false)
+                    DispatchQueue.main.async {
+                        self.setConnected(connected: false)
+                    }
                 }
-				sleep(1)
-			}
-		}
-	}
+                
+                sleep(1)
+            }
+        }
+    }
     
     func setConnected(connected: Bool){
         if (connected){
             self.connectedLabel.text = "Connected"
             self.connectedLabel.textColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
+            
         }
         else{
             self.connectedLabel.text = "Not connected"
             self.connectedLabel.textColor = UIColor.red
         }
     }
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
- 
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 }
 extension ViewController: SimpleBluetoothIODelegate {
     func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8) {

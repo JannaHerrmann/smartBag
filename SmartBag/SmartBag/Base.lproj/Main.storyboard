@@ -241,6 +241,8 @@
                     <connections>
                         <outlet property="mapView" destination="dhd-vv-KpZ" id="o5G-Dy-gfz"/>
                         <outlet property="optionView" destination="RNZ-fD-Vrk" id="3ev-dQ-lFf"/>
+                        <outlet property="outOfRangeOpening" destination="1bT-kz-mU3" id="GzH-ak-maH"/>
+                        <outlet property="theftOpening" destination="e2Z-ht-jCc" id="IcM-PJ-xca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NU5-9E-2CI" userLabel="First Responder" sceneMemberID="firstResponder"/>

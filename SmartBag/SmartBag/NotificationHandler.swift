@@ -11,25 +11,30 @@ import UserNotifications
 
 class NotificationHandler {
     
+    static var repeatAfterSeconds = 60
+    
     func pushOutOfRangeNotification(){
+        
         let notification = UNMutableNotificationContent()
         notification.title = "Out Of Range!"
         notification.body = "The SmartBag is not in your range anymore."
         
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(NotificationHandler.repeatAfterSeconds), repeats: true)
         let request = UNNotificationRequest(identifier: "outOfRange", content: notification, trigger: notificationTrigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
     }
     
     func pushOpeningNotification(){
+        
         let notification = UNMutableNotificationContent()
         notification.title = "Opening!"
         notification.body = "Someone opened your SmartBag."
-
-        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(NotificationHandler.repeatAfterSeconds), repeats: true)
         let request = UNNotificationRequest(identifier: "opening", content: notification, trigger: notificationTrigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
     }
-
+    
 }

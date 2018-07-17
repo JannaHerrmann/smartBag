@@ -19,6 +19,8 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
     var lastLocation : CLLocation!
     var isCentered = false
     
+    @IBOutlet weak var theftOpening: UISwitch!
+    @IBOutlet weak var outOfRangeOpening: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
