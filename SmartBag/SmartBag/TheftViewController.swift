@@ -26,8 +26,11 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
         super.viewDidLoad()
         self.optionView.layer.borderWidth = 1.0
         self.optionView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
+        ViewController.alerrtTheftOpen = theftOpening.isOn
+        ViewController.alerrtTheftOutOfRange = outOfRangeOpening.isOn
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,6 +39,14 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         determineMyCurrentLocation()
+    }
+    
+    @IBAction func openingAlarm(_ sender: UISwitch) {
+        ViewController.alerrtTheftOpen = sender.isOn
+    }
+    
+    @IBAction func outOfRangeAlarm(_ sender: UISwitch) {
+        ViewController.alerrtTheftOutOfRange = sender.isOn
     }
     
     func centerView(){

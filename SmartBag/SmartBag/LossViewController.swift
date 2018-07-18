@@ -19,19 +19,23 @@ class LostViewController : UIViewController, CLLocationManagerDelegate{
     var locationManager : CLLocationManager!
     var lastLocation : CLLocation!
     var isCentered = false
-    
+    @IBOutlet weak var outOfRange: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.optionView.layer.borderWidth = 1.0
         self.optionView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
-        
+         ViewController.alerrtTheftOpen = outOfRange.isOn
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func openingAlarm(_ sender: UISwitch) {
+        ViewController.alerrtTheftOpen = sender.isOn
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         determineMyCurrentLocation()

@@ -14,6 +14,7 @@ class ServerCommunication{
 	static let BASEURL = "http://192.168.11.2:5000"
 	static var alamoFireManager : SessionManager? // this line
 	static var notifiedAboutLoss = false
+    static var notifiedAboutOpen = false
     static var connected = false
 
 	static func initialize(){
@@ -33,17 +34,30 @@ class ServerCommunication{
 				case .success:
                     print(Int(response.result.value!)!)
                     if(Int(response.result.value!)! == 1){
+                        if !ServerCommunication.notifiedAboutOpen{
+                            ServerCommunication.notifiedAboutOpen = true
+                            let alertController = UIAlertController(title: "Bag was opened!", message:
+                                "Lost connection to bag.", preferredStyle: UIAlertControllerStyle.alert)
+                            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: {_ in
+                                DispatchQueue.global().async {
+                                    sleep(10)
+                                    ServerCommunication.notifiedAboutOpen = true
+                                }
+                            }))
+                            UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
+                            NotificationHandler.pushOpeningNotification()
+                        }
                         
                     }
                     else if (Int(response.result.value!)! == 0){
-                        
+                        ServerCommunication.notifiedAboutOpen = false
                     }
                     self.connected = true
 					break
 				case .failure:
-					NotificationHandler().pushOutOfRangeNotification()
                     self.connected = false
 					if !ServerCommunication.notifiedAboutLoss{
+                        NotificationHandler.pushOutOfRangeNotification()
 					ServerCommunication.notifiedAboutLoss = true
 					let alertController = UIAlertController(title: "Bag out of range!", message:
 						"Lost connection to bag.", preferredStyle: UIAlertControllerStyle.alert)
