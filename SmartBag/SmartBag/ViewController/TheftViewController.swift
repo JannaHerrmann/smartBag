@@ -27,7 +27,7 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
         self.optionView.layer.borderWidth = 1.0
         self.optionView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
         ViewController.alerrtTheftOpen = theftOpening.isOn
-        ViewController.alerrtTheftOutOfRange = outOfRangeOpening.isOn
+        outOfRangeOpening.isOn = ViewController.alerOutOfRange
         
     }
     
@@ -46,7 +46,7 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
     }
     
     @IBAction func outOfRangeAlarm(_ sender: UISwitch) {
-        ViewController.alerrtTheftOutOfRange = sender.isOn
+        ViewController.alerOutOfRange = sender.isOn
     }
     
     func centerView(){

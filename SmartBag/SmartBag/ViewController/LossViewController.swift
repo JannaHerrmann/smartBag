@@ -25,7 +25,7 @@ class LostViewController : UIViewController, CLLocationManagerDelegate{
         super.viewDidLoad()
         self.optionView.layer.borderWidth = 1.0
         self.optionView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
-         ViewController.alerrtTheftOpen = outOfRange.isOn
+        outOfRangeOpening.isOn = ViewController.alerOutOfRange
     }
     
     override func didReceiveMemoryWarning() {

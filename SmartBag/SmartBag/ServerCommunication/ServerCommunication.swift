@@ -34,7 +34,7 @@ class ServerCommunication{
 				case .success:
                     print(Int(response.result.value!)!)
                     if(Int(response.result.value!)! == 1){
-                        if !ServerCommunication.notifiedAboutOpen{
+                        if (!ServerCommunication.notifiedAboutOpen && ViewController.alerrtTheftOpen){
                             ServerCommunication.notifiedAboutOpen = true
                             let alertController = UIAlertController(title: "Bag was opened!", message:
                                 "Lost connection to bag.", preferredStyle: UIAlertControllerStyle.alert)
@@ -56,7 +56,7 @@ class ServerCommunication{
 					break
 				case .failure:
                     self.connected = false
-					if !ServerCommunication.notifiedAboutLoss{
+                    if (!ServerCommunication.notifiedAboutLoss && ViewController.alerOutOfRange){
                         NotificationHandler.pushOutOfRangeNotification()
 					ServerCommunication.notifiedAboutLoss = true
 					let alertController = UIAlertController(title: "Bag out of range!", message:

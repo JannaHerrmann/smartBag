@@ -14,11 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var theftButton: UIButton!
     @IBOutlet var topView: UIView!
     @IBOutlet weak var lostButton: UIButton!
-    var simpleBluetoothIO: SimpleBluetoothIO!
+
     @IBOutlet weak var connectedLabel: UILabel!
     
-    static var alerrtTheftOutOfRange = true
-    static var alerrtLossOutOfRange = true
+    static var alerOutOfRange = true
     static var alerrtTheftOpen = true
     
     override func viewDidLoad() {
@@ -35,8 +34,6 @@ class ViewController: UIViewController {
         self.lostButton.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
         self.lostButton.layer.cornerRadius = 10
         self.lostButton.layer.borderWidth = 1
-        
-        NotificationHandler().pushOpeningNotification()
         
         DispatchQueue.global().async {
             while(true){
@@ -75,14 +72,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-}
-extension ViewController: SimpleBluetoothIODelegate {
-    func simpleBluetoothIO(simpleBluetoothIO: SimpleBluetoothIO, didReceiveValue value: Int8) {
-        if value > 0 {
-            print("Receive greater 0")
-        } else {
-            print("Receive else")
-        }
-    }
+
 }
 
