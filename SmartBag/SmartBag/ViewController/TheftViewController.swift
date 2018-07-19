@@ -11,24 +11,37 @@ import MapKit
 import CoreLocation
 
 
-class TheftViewController : UIViewController, CLLocationManagerDelegate{
+class TheftViewController : UIViewController, CLLocationManagerDelegate,  MKMapViewDelegate{
     
     @IBOutlet weak var optionView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     var locationManager : CLLocationManager!
     var lastLocation : CLLocation!
     var isCentered = false
+    var lastConnected : MKPointAnnotation?
+
     
     @IBOutlet weak var theftOpening: UISwitch!
     @IBOutlet weak var outOfRangeOpening: UISwitch!
+
+    
+    func loadPin(){
+        if (ViewController.showPins){
+            if (lastConnected == nil){
+                lastConnected = MKPointAnnotation()
+                lastConnected?.title = "Theft Point"
+                lastConnected?.coordinate = CLLocationCoordinate2D(latitude: self.lastLocation.coordinate.latitude, longitude: self.lastLocation.coordinate.longitude)
+                mapView.addAnnotation(lastConnected!)
+            }
+        }
+    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         self.optionView.layer.borderWidth = 1.0
         self.optionView.layer.borderColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
         ViewController.alerrtTheftOpen = theftOpening.isOn
         outOfRangeOpening.isOn = ViewController.alerOutOfRange
-        
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,8 +93,8 @@ class TheftViewController : UIViewController, CLLocationManagerDelegate{
         if (!isCentered){
             isCentered = true
             self.centerView()
+            loadPin()
         }
-
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
