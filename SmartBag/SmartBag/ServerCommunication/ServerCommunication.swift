@@ -16,6 +16,7 @@ class ServerCommunication{
 	static var notifiedAboutLoss = false
     static var notifiedAboutOpen = false
     static var connected = false
+	static var bagOpen = false
 
 	static func initialize(){
 		let configuration = URLSessionConfiguration.default
@@ -34,6 +35,7 @@ class ServerCommunication{
 				case .success:
                     print(Int(response.result.value!)!)
                     if(Int(response.result.value!)! == 1){
+						ServerCommunication.bagOpen = true
                         if (!ServerCommunication.notifiedAboutOpen && ViewController.alerrtTheftOpen){
                             
                             ServerCommunication.notifiedAboutOpen = true
@@ -50,6 +52,7 @@ class ServerCommunication{
                         }
                     }
                     else if (Int(response.result.value!)! == 0){
+						ServerCommunication.bagOpen = false
                         ServerCommunication.notifiedAboutOpen = false
                     }
                     self.connected = true

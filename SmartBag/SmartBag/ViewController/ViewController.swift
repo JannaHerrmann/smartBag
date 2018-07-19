@@ -17,7 +17,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var connectedLabel: UILabel!
 
-    
+	@IBOutlet var bagLabel: UILabel!
+	
     static var showPins = false
     
     static var alerOutOfRange = true
@@ -64,10 +65,16 @@ class ViewController: UIViewController {
             ViewController.showPins = false
             self.connectedLabel.text = "Connected"
             self.connectedLabel.textColor = #colorLiteral(red: 0.2056839466, green: 0.4766893387, blue: 0.4690987468, alpha: 1)
-            
+			if(ServerCommunication.bagOpen){
+				self.bagLabel.text = "Bag: Open"
+			}else{
+				self.bagLabel.text = "Bag: Closed"
+			}
+
         }
         else{
             ViewController.showPins = true
+			self.bagLabel.text = "Bag: -"
             self.connectedLabel.text = "Not connected"
             self.connectedLabel.textColor = UIColor.red
         }

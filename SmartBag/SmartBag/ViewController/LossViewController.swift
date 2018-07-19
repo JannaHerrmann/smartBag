@@ -12,7 +12,7 @@ import MapKit
 import CoreLocation
 
 
-class LostViewController : UIViewController, CLLocationManagerDelegate,  MKMapViewDelegate, PinDelegate {
+class LostViewController : UIViewController, CLLocationManagerDelegate,  MKMapViewDelegate {
     
     @IBOutlet weak var optionView: UIView!
     @IBOutlet weak var mapView: MKMapView!
