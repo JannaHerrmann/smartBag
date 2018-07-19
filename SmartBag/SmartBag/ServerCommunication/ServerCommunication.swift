@@ -35,6 +35,7 @@ class ServerCommunication{
                     print(Int(response.result.value!)!)
                     if(Int(response.result.value!)! == 1){
                         if (!ServerCommunication.notifiedAboutOpen && ViewController.alerrtTheftOpen){
+                            
                             ServerCommunication.notifiedAboutOpen = true
                             let alertController = UIAlertController(title: "Bag was opened!", message:
                                 "Lost connection to bag.", preferredStyle: UIAlertControllerStyle.alert)
@@ -47,7 +48,6 @@ class ServerCommunication{
                             UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
                             NotificationHandler.pushOpeningNotification()
                         }
-                        
                     }
                     else if (Int(response.result.value!)! == 0){
                         ServerCommunication.notifiedAboutOpen = false
@@ -58,7 +58,8 @@ class ServerCommunication{
                     self.connected = false
                     if (!ServerCommunication.notifiedAboutLoss && ViewController.alerOutOfRange){
                         NotificationHandler.pushOutOfRangeNotification()
-					ServerCommunication.notifiedAboutLoss = true
+					
+                        ServerCommunication.notifiedAboutLoss = true
 					let alertController = UIAlertController(title: "Bag out of range!", message:
 						"Lost connection to bag.", preferredStyle: UIAlertControllerStyle.alert)
 					alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: {_ in

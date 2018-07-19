@@ -21,11 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Program requires GPS to track cars and job orders</string>
+	<string>SmartBag requires GPS to locate you and your bag</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Program requires GPS to track cars and job orders</string>
+	<string>SmartBag requires GPS to locate you and your bag</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Program requires GPS to track cars and job orders</string>
+	<string>SmartBag requires GPS to locate you and your bag</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app uses your Microphone to allow Voice over IP communication with the Program Admin system</string>
 	<key>UILaunchStoryboardName</key>
